@@ -1,4 +1,4 @@
-const projects_element = document.querySelector('#projects');
+const projects_element = document.querySelector('.projects--container');
 
 const repos = () => {
     const url = `https://api.github.com/users/felipesntr/repos`;
@@ -20,7 +20,12 @@ document.addEventListener('DOMContentLoaded', () => {
             'user-authentication-system'
         ];
         if (repositories_allowed.includes(repository.name)) {
-            const project = new Project(repository.name, repository.description, repository.html_url, repository.language);
+            const project = new Project(
+                repository.name,
+                repository.description,
+                repository.html_url,
+                repository.language
+            );
             const project_card = new ProjectCard(project);
             const project_element = project_card.create();
             projects_element.appendChild(project_element);

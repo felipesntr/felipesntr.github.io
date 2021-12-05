@@ -25,14 +25,12 @@ class ProjectCard {
                     </a>
                 </h1>
                 <div class="project-content">
-                    <span class="card-title">${this.project.name}</span>
-                    <p>${this.project.description}</p>
+                    <p>${this.project.description ? this.project.description : ""}</p>
                 </div>
                 <div class="project-language">
                     ${this.project.language}
                 </div>
             </div>
-        </a>
         `;
         return card;
     }

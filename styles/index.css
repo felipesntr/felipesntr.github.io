@@ -66,3 +66,47 @@ body {
 .links a:hover {
   color: #5ae97c;
 }
+
+
+/* SECTION: projects */
+
+.projects {
+  padding-top:80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  height: 100vh;
+  background-color: #f7f7f7;
+  color: #0e0e0e;
+}
+
+.projects--container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 22px;
+  padding-top:80px;
+  height: 100vh;
+  background-color: #f7f7f7;
+  color: #0e0e0e;
+  
+}
+
+.project-card{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 200px;
+  width: 420px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+.project-card a {
+  color: #1159a0;
+  text-decoration: none;
+}
