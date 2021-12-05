@@ -1,8 +1,9 @@
 class Project {
-    constructor(name, description, link) {
+    constructor(name, description, link, language) {
         this.name = name;
         this.description = description;
         this.link = link;
+        this.language = language;
     }
 }
 
@@ -17,15 +18,18 @@ class ProjectCard {
         card.classList.add('project-card');
 
         card.innerHTML = `
-            <div class="card">
+            <div class="project-card">
                 <h1>
-                    <a href="${this.project.link}" target="_blank" class="project-card">
+                    <a href="${this.project.link}" target="_blank" class="project-title">
                         ${this.project.name}
                     </a>
                 </h1>
-                <div class="card-content">
+                <div class="project-content">
                     <span class="card-title">${this.project.name}</span>
                     <p>${this.project.description}</p>
+                </div>
+                <div class="project-language">
+                    ${this.project.language}
                 </div>
             </div>
         </a>
