@@ -17,21 +17,27 @@ class ProjectCard {
         card.classList.add('card');
         card.classList.add('project-card');
 
-        card.innerHTML = `
-            <div class="project-card">
-                <h1>
-                    <a href="${this.project.link}" target="_blank" class="project-title">
-                        ${this.project.name}
-                    </a>
-                </h1>
-                <div class="project-content">
-                    <p>${this.project.description ? this.project.description : ""}</p>
-                </div>
-                <div class="project-language">
-                    ${this.project.language}
-                </div>
-            </div>
-        `;
+        const project_title = document.createElement('h3');
+        project_title.classList.add('project-title');
+
+        const project_title_a = document.createElement('a');
+        project_title_a.href = this.project.link;
+        project_title_a.innerText = this.project.name;
+
+        project_title.appendChild(project_title_a);
+
+        const project_description = document.createElement('p');
+        project_description.classList.add('project-description');
+        project_description.textContent = this.project.description;
+
+        const project_language = document.createElement('p');
+        project_language.classList.add('project-language');
+        project_language.textContent = this.project.language;
+
+        card.appendChild(project_title);
+        card.appendChild(project_description);
+        card.appendChild(project_language);
+
         return card;
     }
 }
