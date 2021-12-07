@@ -12,12 +12,12 @@ document.addEventListener('DOMContentLoaded', () => {
     repositories.then(data => data.filter(repository => {
         const repositories_allowed = [
             'felipesntr.github.io',
-            'quiz-generator-api',
             'rest-countries-api-with-angular-material',
             'react-modal',
             'stock-control',
             'sunnyside-agency-landing-page',
-            'user-authentication-system'
+            'user-authentication-system',
+            'transaction'
         ];
         if (repositories_allowed.includes(repository.name)) {
             const project = new Project(
