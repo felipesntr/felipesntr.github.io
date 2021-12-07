@@ -9,7 +9,7 @@ const repos = () => {
 
 document.addEventListener('DOMContentLoaded', () => {
     const repositories = repos();
-    repositories.then(data => data.map(repository => {
+    repositories.then(data => data.filter(repository => {
         const repositories_allowed = [
             'felipesntr.github.io',
             'quiz-generator-api',
