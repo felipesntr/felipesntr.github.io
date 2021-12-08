@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 repository.html_url,
                 repository.language
             );
-            const project_card = new ProjectCard(project);
+            const project_card = new Card(project);
             const project_element = project_card.create();
             projects_element.appendChild(project_element);
         }

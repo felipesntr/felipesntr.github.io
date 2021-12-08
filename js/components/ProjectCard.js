@@ -7,7 +7,7 @@ class Project {
     }
 }
 
-class ProjectCard {
+class Card {
     constructor(project) {
         this.project = project;
     }
