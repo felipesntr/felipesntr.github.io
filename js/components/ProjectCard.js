@@ -7,16 +7,12 @@ class Project {
     }
 }
 
-class Card {
+class ProjectCard {
     constructor(project) {
         this.project = project;
     }
 
     create() {
-        const card = document.createElement('div');
-        card.classList.add('card');
-        card.classList.add('project-card');
-
         const project_title = document.createElement('h3');
         project_title.classList.add('project-card--title');
 
@@ -34,10 +30,11 @@ class Card {
         project_language.classList.add('project-card--language');
         project_language.textContent = this.project.language;
 
-        card.appendChild(project_title);
-        card.appendChild(project_description);
-        card.appendChild(project_language);
+        const card = new Card(project_title, project_description, project_language);
+        const card_element = card.render();
+        card_element.classList.add('card');
+        card_element.classList.add('project-card');
 
-        return card;
+        return card_element;
     }
 }
