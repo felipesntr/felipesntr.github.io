@@ -10,16 +10,6 @@ const repos = () => {
 document.addEventListener('DOMContentLoaded', () => {
     const repositories = repos();
     repositories.then(data => data.filter(repository => {
-        const repositories_allowed = [
-            'felipesntr.github.io',
-            'rest-countries-api-with-angular-material',
-            'react-modal',
-            'stock-control',
-            'sunnyside-agency-landing-page',
-            'user-authentication-system',
-            'transaction'
-        ];
-        if (repositories_allowed.includes(repository.name)) {
             const project = new Project(
                 repository.name,
                 repository.description,
