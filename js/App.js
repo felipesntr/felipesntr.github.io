@@ -1,3 +1,4 @@
+/*
 const projects_element = document.querySelector(".projects--container");
 
 const repos = () => {
@@ -23,3 +24,4 @@ document.addEventListener("DOMContentLoaded", () => {
     })
   );
 });
+*/
